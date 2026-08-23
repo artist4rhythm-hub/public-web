@@ -16,8 +16,10 @@ export async function loadNews(org, limitN, el){
     el.innerHTML = items.length ? items.map(p=>{
       const d = p.at?.seconds ? new Date(p.at.seconds*1000) : null;
       const ds = d ? `${d.getFullYear()}. ${d.getMonth()+1}. ${d.getDate()}.` : '';
+      const ph = (typeof p.photo==='string' && p.photo.startsWith('data:image/')) ? p.photo : '';
       return `<div class="news-it"><div class="t">${esc(p.title||'')}</div>
         <div class="m">${ds}${p.category?' · '+esc(p.category):''}</div>
+        ${ph?`<img src="${ph}" alt="" style="max-width:100%;border-radius:10px;margin-top:9px">`:''}
         ${p.body?`<div class="b">${esc(p.body)}</div>`:''}</div>`;
     }).join('') : '<p class="note">아직 올라온 소식이 없습니다.</p>';
   }catch(e){

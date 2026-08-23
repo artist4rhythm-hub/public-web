@@ -1,11 +1,9 @@
-// 공개 홈페이지 전용 Firebase 설정 (⚠️ 내부 운영 프로젝트가 아닌 «별도 프로젝트»)
-// 개설 가이드 3단계에서 받은 값을 붙여넣으세요. 비어 있으면 소식란은 «준비 중»으로만 표시됩니다.
-window.PUBLIC_FB = null;
-/* 예시:
+// 공개 홈페이지 전용 Firebase 설정 (⚠️ 내부 운영 프로젝트가 아닌 «별도 프로젝트» daniel-public)
 window.PUBLIC_FB = {
-  apiKey: "...",
+  apiKey: "AIzaSyDXocSonG6EgASZ1BRQN8nkb5GKoHCvX_8",
   authDomain: "daniel-public.firebaseapp.com",
   projectId: "daniel-public",
-  appId: "..."
+  storageBucket: "daniel-public.firebasestorage.app",
+  messagingSenderId: "509569562681",
+  appId: "1:509569562681:web:da79e96fb55870844b35e8"
 };
-*/
